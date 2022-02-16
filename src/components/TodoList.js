@@ -5,10 +5,10 @@ const TodoList = (props) =>{
    
     return(
         <>
-            <ul className="todoList">
-                {props.items.map((item,index) =>{
+             <ul className="todoList">
+                {props.items.map(item =>{
                     return(
-                        <li key={index}>{item} <button onClick={(e) => props.onRemoveItem(index)}> &times; </button></li>
+                        <li key={item.id}>{item.text} <button onClick={() => props.onRemoveItem(item.id)}> &times; </button></li>
                     )
                 })}
             </ul>
