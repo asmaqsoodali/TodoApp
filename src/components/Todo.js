@@ -13,8 +13,9 @@ const Todo = () => {
         setInputData(e.target.value)
     }
 
-    const addItem = () =>{
-        if(!inputData){
+    const addItem = (e) =>{
+        e.preventDefault();
+        if((!inputData) || (inputData.length < 2)){
             return
         }
         setItems([...items,inputData]);
@@ -36,7 +37,7 @@ const Todo = () => {
                 <TodoInput 
                     inputVal={inputData} 
                     onInputChange={(e)=>handleInputChange(e)}
-                    addItem={()=>addItem()}
+                    addItem={(e)=>addItem(e)}
                 />
                 <TodoList
                     items={items}
