@@ -1,7 +1,7 @@
 .container-todo{
     width: 500px;
     padding: 40px 60px;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 80px);
     background: #fff;
     text-align: center;
     margin: 0 auto;
@@ -18,7 +18,7 @@
 
 @media(max-width: 750px){
     .container-todo{
-        width:85%;
+        width:100%;
         padding: 30px;
        
     }
