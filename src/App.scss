@@ -1,25 +1,15 @@
+$font-primary : 'Montserrat', sans-serif;
+
 html,body{
   margin:0;
   padding:0;
 }
 .App{
-  position:relative;
   min-height: 100vh;
-  padding: 40px 0;
-  background: #79def9;
+  padding: 40px 15px;
   background: rgb(34,193,195);
   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,148,253,1) 100%);
-  font-family: 'Montserrat', sans-serif;
-  // &:after{
-  //   position: absolute;
-  //   content: "";
-  //   height: 35%;
-  //   background: #79def9;
-  //   width: 100%;
-  //   bottom: 0;
-  //   left: 0;
-  //   z-index: -1;
-  // }
+  font-family: $font-primary;
 }
 *{
   box-sizing: border-box;
@@ -32,5 +22,5 @@ ul{
 input,button{
   border: none;
   outline: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-primary;
 }
