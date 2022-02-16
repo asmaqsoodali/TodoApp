@@ -18,13 +18,19 @@ const Todo = () => {
         if((!inputData) || (inputData.length < 2)){
             return
         }
-        setItems([...items,inputData]);
+        setItems([
+            ...items,
+            {
+                id:Math.floor(Math.random() * 1000),
+                text:inputData
+            }
+        ])
         setInputData('');
     }
 
-    const handleRemoveItem = (delIndex) => {
-        const updatedItems = items.filter((item,index)=>{
-               return(index != delIndex)
+    const handleRemoveItem = (delId) => {
+        const updatedItems = items.filter((item)=>{
+               return(item.id != delId)
         })
         setItems(updatedItems)
     }
@@ -41,7 +47,7 @@ const Todo = () => {
                 />
                 <TodoList
                     items={items}
-                    onRemoveItem={(e)=>handleRemoveItem(e)}
+                    onRemoveItem={(id)=>handleRemoveItem(id)}
                 />
              </div>
         </>
